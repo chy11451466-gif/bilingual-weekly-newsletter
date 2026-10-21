@@ -1,2 +1,89 @@
-# bilingual-weekly-newsletter
-An automated bilingual weekly newsletter powered by Python and AI. Automatically collects the latest news, generates Chinese and English summaries, delivers newsletters by email every Saturday at 7:00 AM Beijing time, and archives each issue on GitHub.一个由 Python 和 AI 驱动的自动化中英文双语周刊项目。每周自动搜集最新资讯，生成中英文新闻摘要，每周六北京时间上午 7 点通过邮件发送，并将每期周刊归档到 GitHub。
+🌍 Bilingual Weekly Newsletter
+
+An automated bilingual newsletter powered by Python, OpenAI, and GitHub Actions.
+
+一个基于 Python、OpenAI 和 GitHub Actions 的自动化中英文双语周刊项目。
+
+✨ Features
+
+- 📰 Search for recent news and developments.
+- 🇨🇳 Generate a Chinese weekly newsletter.
+- 🇺🇸 Generate an English version covering the same stories.
+- 🤖 Use AI to summarize news and explain why it matters.
+- 📚 Learn five useful English expressions every week.
+- 📧 Automatically deliver the newsletter by email.
+- 🗂️ Archive each issue in the GitHub repository.
+- ⏰ Run automatically every Saturday at 07:00 Beijing time.
+
+🛠️ Tech Stack
+
+- Python
+- OpenAI Responses API
+- OpenAI Web Search
+- GitHub Actions
+- SMTP email delivery
+
+📂 Project Structure
+
+.
+├── .github/
+│   └── workflows/
+│       └── weekly.yml
+├── newsletters/
+├── newsletter.py
+├── requirements.txt
+└── README.md
+
+⚙️ Configuration
+
+Configure the following GitHub repository secrets:
+
+- "OPENAI_API_KEY"
+- "EMAIL_FROM"
+- "EMAIL_TO"
+- "EMAIL_PASSWORD"
+
+Optional repository variables:
+
+- "OPENAI_MODEL"
+- "SMTP_HOST"
+- "SMTP_PORT"
+
+For Gmail, use "smtp.gmail.com" and port "465".
+
+Use an appropriate Gmail app password if your account supports it.
+
+Never commit API keys, email passwords, or other secrets to the repository.
+
+⏰ Schedule
+
+The workflow uses UTC scheduling:
+
+- cron: "0 23 * * 5"
+
+This corresponds to Saturday at 07:00 in Beijing time.
+
+GitHub Actions scheduling may be delayed during periods of high load.
+
+🚀 Manual Execution
+
+1. Open the repository on GitHub.
+2. Select the Actions tab.
+3. Open Bilingual Weekly Newsletter.
+4. Click Run workflow.
+
+📚 Newsletter Archive
+
+Generated issues are saved in the "newsletters/" directory.
+
+Each issue is stored as a Markdown file named by date.
+
+🔒 Security
+
+Credentials are stored in GitHub Actions Secrets and are not hardcoded in the source code.
+
+📄 License
+
+MIT License
+                             chy
+                      2026 10 21         
